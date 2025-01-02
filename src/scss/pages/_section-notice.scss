@@ -1,0 +1,158 @@
+// 注意事項
+// ---------------------------------
+.section-notice {
+  // position: relative;
+  background-color: #FFF2CF;
+  color: $black;
+  scroll-margin-top: 40px;
+
+
+  // NOTICE //
+  .notice {
+    &__toggle{
+      position: relative;
+      @include flex-center;
+    }
+    &__icon{
+      &-plus{
+        position: absolute;
+        right: calc(50% - 80px);
+        background: url('../images/icon_notice_dec.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 20px;
+        height: 20px;
+        transform: rotate(90deg);
+        transition: 0.4s;
+      }
+      &-dec{
+        position: absolute;
+        right: calc(50% - 80px);
+        background: url('../images/icon_notice_dec.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 20px;
+        height: 20px;
+        transition: 0.4s;
+      }
+    }
+    &__title {
+      @include flex-center;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: px-em(24);
+      padding-top: 35px;
+      padding-bottom: 35px;
+      font-family: 'MaruM';
+      transition: transform 0.6s $cubic;
+
+      .notice--active & {
+        background-color: #FFF2CF;
+        font-size: px-em(24);
+      }
+
+    }
+
+    &__content {
+      display: none;
+      font-size: px-em(18);
+      padding: 0 30px;
+      margin: 0 auto;
+      max-width: 990px;
+
+      .notice-list {
+        margin: 0 auto;
+        padding-bottom: 50px;
+
+        li {
+          list-style: decimal;
+          line-height: 1.444;
+          letter-spacing: 0.06em;
+          text-align: justify;
+          margin-left: 20px;
+          color: #333333;
+        }
+      }
+    }
+  }
+  &.notice--active{
+
+    .notice__toggle{
+      .notice__icon{
+        &-plus{
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+
+
+//   // web中版-1420
+  @include breakpoint(xl) {
+    scroll-margin-top: vw(40px);
+
+    .notice {
+
+      &__content {
+        padding: 0 vw(80px);
+
+        .notice-list {
+          padding-bottom: 50px;
+
+          li {
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+
+  }
+
+
+
+  // 小網-768
+  @include breakpoint(sm) {
+    scroll-margin-top: vwm(40px);
+    margin-bottom: vwm(203px);
+    
+    .notice {
+      &__toggle {
+        font-size: vwm(50px);
+      }
+
+      &__title{
+        margin-right: vwm(34px);
+        font-size: vwm(50px);
+        padding: vwm(35px) 0;
+      }
+
+      &__icon{
+        &-plus{
+          right: calc(50% - #{vwm(130px)});
+          width: vwm(35px);
+          height: vwm(35px);
+        }
+        &-dec{
+          right: calc(50% - #{vwm(130px)});
+          width: vwm(35px);
+          height: vwm(35px);
+        }
+      }
+
+      &__content {
+        font-size: clamp(12px, vwm(36px), vwm(36px));
+        max-width: vwm(700px);
+        padding: 0 vwm(15px);
+
+        .notice-list {
+          padding: 0 0.5em vwm(30px) 1em;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(xs) {
+    scroll-margin-top: vwm(20px);
+  }
+}

@@ -1,0 +1,74 @@
+$f-offset: 50px;
+$f-time: 1000ms;
+.js-animate {
+    animation-duration: $f-time;
+    animation-fill-mode: forwards;
+    &--fadein {
+        opacity: 0;
+    }
+    &--fadein-up {
+        opacity: 0;
+        transform: translate(0, ( $f-offset * -1));
+    }
+    &--fadein-down {
+        opacity: 0;
+        transform: translate(0, $f-offset);
+    }
+    &--fadein-left {
+        opacity: 0;
+        transform: translate(($f-offset * -1), 0);
+    }
+    &--fadein-right {
+        opacity: 0;
+        transform: translate($f-offset, 0);
+    }
+    &--maskin-left {
+        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    }
+    &--maskin-right {
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    }
+    &--maskin-up {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    &--maskin-down {
+        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    }
+    &--darkin {
+        filter: brightness(65%);
+    }
+    &--smallin {
+        transform: scale(0.9);
+    }
+    &--active {
+        opacity: unset;
+        transform: unset;
+        @include ie-only {
+            opacity: 1;
+            transform: none;
+        }
+        @supports not (transform: unset) {
+            opacity: 1;
+            transform: none;
+        }
+		transition: all $f-time;
+		&[class*="--maskin"] {
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+        &[class*="--maskin-left"] {
+        }
+        &[class*="--darkin"] {
+            filter: brightness(1);
+        };
+        &.js-animate--path {
+            stroke-dashoffset: 0px!important;
+        }
+    }
+    @for $i from 1 through 10 {
+        $j: $i *100;
+        &--delay#{$j} {
+            transition-delay: #{$j}ms;
+        }
+    }
+
+}

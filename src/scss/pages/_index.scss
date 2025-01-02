@@ -1,0 +1,70 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 3em;
+}
+
+body {
+  height: 100%;
+}
+
+
+
+// 共用
+// ---------------------------------
+.section {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  &-title {
+    font-size: 45px;
+    font-weight: bold;
+    font-family: $custom-font-cht;
+    color: #3D1F11;
+    position: relative;
+    display: inline-block;
+    // margin-left: 12px;
+    letter-spacing: 2px;
+    &:after {
+      content: '';
+      width: 260px;
+      height: 35px;
+      bottom: -32px;
+      left: 53%;
+      transform: translateX(-50%);
+      background: url('../images/img_title-line.svg') no-repeat;
+      background-size: cover;
+      position: absolute;
+    }
+  }
+
+
+  @include breakpoint(xl) {
+    padding-top: vw(60px);
+    padding-bottom: vw(60px);
+
+    &-title {
+      font-size: vw(45px);
+      // margin-left: vw(12px);
+      letter-spacing: vw(2px);
+      &:after {
+        width: vw(260px);
+        height: vw(35px);
+        bottom: vw(-32px);
+      }
+    }
+  }
+  @include breakpoint(sm) {
+    padding-top: vwm(60px);
+    padding-bottom: vwm(35px);
+    &-title {
+      font-size: vwm(60px);
+      &:after {
+        width: vwm(260px);
+        height: vwm(35px);
+        bottom: vwm(-44px);
+      }
+    }
+
+  }
+}

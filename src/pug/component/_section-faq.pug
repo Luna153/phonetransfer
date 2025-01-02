@@ -1,0 +1,31 @@
+mixin faq-toggle(datas, cat)
+  each data in datas
+    if data.cat == cat
+      .toggle.faq-toggle.faq-toggle__design
+        .toggle__trigger.faq-toggle__trigger!=data.title
+          img(src="images/icon_notice_dec.svg").faq-toggle__trigger-icon
+          img(src="images/icon_notice_dec.svg").icon-transform
+        .toggle__content.faq-toggle__content!=data.content
+
+
+mixin section-faq()
+  section.section.section-faq#section-faq
+    .wrap__decobox
+      .wrap__decobox-icon.para-pool-Left(data-speed='0.1')
+        img(src='images/img_download-unicorn.svg')
+      .wrap__decobox-icon.para-pool-Left(data-speed='0.15')
+        img(src='images/img_download-starfish.svg')
+      .wrap__decobox-icon.para-pool-Left(data-speed='0.2')
+        img(src='images/img_download-duck-left.svg')
+      .wrap__decobox-icon.para-pool-Right(data-speed='0.1')
+        img(src='images/img_download-duck-right.svg')
+      .wrap__decobox-icon.para-pool-Right(data-speed='0.35')
+        img(src='images/img_download-donut.svg')
+      .wrap__decobox-icon.para-pool-Right(data-speed='0.5')
+        img(src='images/img_download-starfish.svg')
+    .wrap__inner.wrap__inner-faq
+      .center(data-aos="fade-up" data-aos-duration="1200")
+        h2.section-title 活動Q＆A
+      div(data-aos="fade-up" data-aos-duration="1400")
+        +faq-toggle(faq_data, '常見問題')
+

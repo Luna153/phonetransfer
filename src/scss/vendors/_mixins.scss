@@ -1,0 +1,100 @@
+// active + hover 統一樣式
+// ----------------------------------------------
+// 用法1          @include active-hover { ... }
+
+@mixin active-hover {
+  &:focus,
+  &:hover,
+  &:active {
+    @media (min-width: map-get($grid-breakpoints, lg)) {
+      @content;
+    }
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-separate {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin size($w: null, $h: $w) {
+  width: $w;
+  height: $h;
+}
+
+@mixin ie-only {
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    @content;
+  }
+}
+@mixin edge-only {
+  @supports (-ms-ime-align: auto) {
+    @content;
+  }
+}
+
+@mixin breakpoint($name) {
+  // 預設範圍
+  $breakpoints: (
+    xxs: 320px,
+    xs: 375px,
+    sm: 768px,
+    ssm: 991px,
+    md: 1024px,
+    lg: 1200px,
+    xl: 1420px
+  ) !default;
+
+  $point: map-get($breakpoints, $name); //如我們輸入lg，就會取得breakpoints對應的key+value
+
+  @if $point {
+    $max: nth($point, 1);
+    @media (max-width: $max) {
+      @content;
+    }
+  }
+}
+
+
+@mixin scroll-bar($size: 2) {
+  // Scrollbar IE
+  scrollbar-face-color: $gray-300;
+  scrollbar-3dlight-color: $gray-100;
+  scrollbar-highlight-color: $gray-100;
+  scrollbar-track-color: $gray-100;
+  scrollbar-arrow-color: $gray-300;
+  scrollbar-dark-shadow-color: $gray-100;
+  scrollbar-width: thin;
+
+  // Scrollbar Chrome
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    appearance: none;
+    width: $gap-base-unit * $size;
+    height: $gap-base-unit * $size;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $gray-300;
+    border-radius: $gap-base-unit * $size;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: $gray-100;
+  }
+}
+
+@mixin line-clamp($line: 2, $lh: $line-height-base) {
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: $lh * $line * 1em;
+  line-height: $lh;
+}

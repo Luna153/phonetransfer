@@ -1,0 +1,818 @@
+.section-process {
+  display: flex;
+  padding-bottom: 116px;
+  scroll-margin-top: 40px;
+
+  .section-title {
+    margin-bottom: 78px;
+  }
+
+
+  // 門號綁定TAB
+  .con__tableBox__binding {}
+
+  .con__table--box-binding {
+    margin: 0 auto;
+    width: 100%;
+
+    ul.table__nav__binding {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .table__con__binding {
+    display: none;
+
+    &.active {
+      display: block;
+      // width: 100%;
+    }
+  }
+
+  .table__nav__binding {
+    margin-bottom: 48px;
+
+    .tabs_btn_binding {
+      position: relative;
+      background: #fff;
+      border: 3px solid #909090;
+      border-radius: 48px;
+      color: #909090;
+      cursor: pointer;
+      font-size: 24px;
+      padding: 14px 22px;
+      margin: 0 9px;
+      transition:
+        background 0.3s linear,
+        transform 0.1s linear;
+
+      &::after {
+        display: none;
+      }
+
+
+      &.active {
+        background: #ff7673;
+        border-color: #541c22;
+        color: #000;
+
+        &::before {
+          content: '';
+          background-image: url(../images/img_tab-arrow.svg);
+          background-size: cover;
+          position: absolute;
+          top: 99%;
+          left: 50%;
+          display: block;
+          width: 22px;
+          height: 17.5px;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+
+  .slider-binding {
+    margin: 0 auto;
+  }
+
+  .binding-card {
+    display: flex;
+    justify-content: space-between;
+    // gap: 50px;
+
+    .splide__slide {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 17px;
+        top: 46%;
+        right: -10px;
+        background-image: url('../images/icon_process_arrow.svg');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: 2;
+      }
+
+      @include breakpoint(sm) {
+        flex-shrink: 0;
+      }
+    }
+
+    &__card-item {
+      color: $black;
+      height: 100%;
+      position: relative;
+    }
+
+    &__card-inner {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-weight: 500;
+    }
+
+    &__title {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      height: 35px;
+      // font-family: 'MaruM';
+      font-size: 20px;
+      letter-spacing: 1.5px;
+
+      &-img {
+        width: 38px;
+        margin-right: 12px;
+      }
+    }
+
+    &__img {
+      max-width: 286px;
+      height: 590px;
+      width: 100%;
+      position: relative;
+      // margin-top: 28px;
+      // margin-bottom: 29px;
+      margin: 28px 22px 29px 22px;
+      border-radius: 30px;
+      border: 4px solid #541c22;
+    }
+
+    &__icon {
+      // position: absolute;
+      width: 30px;
+      height: 34.6px;
+      margin-top: 390px;
+      // right: -2.5rem;
+    }
+
+    &__content {
+      // font-family: 'MaruM';
+      font-size: 20px;
+      text-align: center;
+      line-height: 1.5;
+      letter-spacing: 1.5px;
+    }
+  }
+
+  // 門號轉帳TAB
+  .exclusive__inner {
+    margin-top: 139px;
+    scroll-margin-top: 70px;
+  }
+
+  .con__tableBox {
+    max-width: 1920px;
+
+    // width: 1300px;
+    // @include breakpoint(lg) {
+    //   width: auto;
+    // }
+  }
+
+  .con__table--box {
+    margin: 0 auto;
+    width: 100%;
+
+    ul.table__nav {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .table__con {
+    display: none;
+
+    &.active {
+      display: block;
+      // width: 100%;
+    }
+  }
+
+  .table__nav {
+    margin-bottom: 48px;
+    // gap: 18px;
+
+    .tabs_btn {
+      position: relative;
+      background: #fff;
+      border: 3px solid #909090;
+      border-radius: 48px;
+      color: #909090;
+      cursor: pointer;
+      font-size: 24px;
+      padding: 14px 22px;
+      margin: 0 9px;
+      transition:
+        background 0.3s linear,
+        transform 0.1s linear;
+
+      &::after {
+        display: none;
+      }
+
+
+      &.active {
+        background: #ff7673;
+        border-color: #541c22;
+        color: #000;
+
+        &::before {
+          content: '';
+          background-image: url(../images/img_tab-arrow.svg);
+          background-size: cover;
+          position: absolute;
+          top: 99%;
+          left: 50%;
+          display: block;
+          width: 22px;
+          height: 17.5px;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+
+  .slider-exclusive {
+    margin: 0 auto;
+  }
+
+  .splide__track {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .exclusive-card {
+    display: flex;
+    justify-content: space-between;
+    // gap: 143.5px;
+
+    .splide__slide {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 17px;
+        top: 48%;
+        right: -10px;
+        background-image: url('../images/icon_process_arrow.svg');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: 2;
+        // animation: slideInOutX 1s;
+        // animation-delay: 1s;
+      }
+
+      // @include breakpoint(sm) {
+      //   flex-shrink: 0;
+      // }
+    }
+    .splide__slide:nth-child(1)::after {
+      animation-delay: 0s;
+    }
+
+    .splide__slide:nth-child(2)::after {
+      animation-delay: 0.5s;
+    }
+
+    .splide__slide:nth-child(3)::after {
+      animation-delay: 0.5s;
+    }
+
+    &__card-item {
+      color: $black;
+      height: 100%;
+      position: relative;
+    }
+
+    &__card-inner {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-weight: 500;
+    }
+
+    &__title {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      height: 35px;
+      // font-family: 'MaruM';
+      font-size: 20px;
+      letter-spacing: 1.5px;
+
+      &-img {
+        width: 38px;
+        margin-right: 12px;
+      }
+    }
+
+    &__img {
+      max-width: 286px;
+      height: 590px;
+      width: 100%;
+      position: relative;
+      // margin-top: 28px;
+      // margin-bottom: 29px;
+      margin: 28px 72px 29px 72px;
+      border-radius: 30px;
+      border: 4px solid #541c22;
+    }
+
+    &__icon {
+      // position: absolute;
+      width: 30px;
+      height: 34.6px;
+      margin-top: 390px;
+      // right: -2.5rem;
+    }
+
+    &__content {
+      // font-family: 'MaruM';
+      font-size: 20px;
+      text-align: center;
+      line-height: 1.5;
+      letter-spacing: 1.5px;
+    }
+  }
+
+  /* 隱藏最後一張卡片的偽元素 */
+  .exclusive-card .splide__slide:last-child::after,
+  .binding-card .splide__slide:last-child::after {
+    display: none;
+  }
+
+
+  // 行動裝置大版Pad-1420
+  @include breakpoint(xl) {
+    .section-title {
+      margin-bottom: vw(80px);
+    }
+  // 門號綁定TAB
+  .con__tableBox__binding {}
+
+  .con__table--box-binding {
+
+    ul.table__nav__binding {}
+  }
+
+  .table__con__binding {
+
+    &.active {}
+  }
+
+  .table__nav__binding {
+    margin-bottom: vw(48px);
+    // gap: vw(18px);
+
+    .tabs_btn_binding {
+      border-width: vw(4px);
+      border-radius: vw(48px);
+      font-size: vw(24px);
+      padding: vw(14px) vw(22px);
+      margin: 0 vw(9px);
+
+      &::after {}
+
+
+      &.active {
+
+        &::before {
+          top: 99%;
+          left: 50%;
+          width: vw(22px);
+          height: vw(17.5px);
+        }
+      }
+    }
+  }
+
+  .slider-binding {}
+
+  .binding-card {
+    // gap: vw(50px);
+
+    .splide__slide {
+
+
+      &::after {
+        width: vw(15px);
+        height: vw(17px);
+        top: 46%;
+        right: vw(-10px);
+      }
+
+    }
+
+    &__card-item {}
+
+    &__card-inner {}
+
+    &__title {
+      height: vw(35px);
+      font-size: vw(20px);
+      letter-spacing: vw(1.5px);
+
+      &-img {
+        width: vw(38px);
+        margin-right: vw(12px);
+      }
+    }
+
+    &__img {
+      max-width: vw(286px);
+      height: vw(590px);
+      margin: vw(28px) vw(18px) vw(29px) vw(18px);
+      margin-top: vw(28px);
+      margin-bottom: vw(29px);
+      border-radius: vw(30px);
+      border: vw(4px) solid #541c22;
+    }
+
+    &__icon {
+      width: vw(30px);
+      height: vw(34.6px);
+      margin-top: vw(390px);
+    }
+
+    &__content {
+      font-size: vw(20px);
+    }
+  }
+
+
+
+  // 門號轉帳TAB
+  .exclusive__inner {
+    margin-top: vw(139px);
+    scroll-margin-top: vw(60px);
+  }
+
+  .con__tableBox {}
+
+  .con__table--box {
+
+    ul.table__nav {}
+  }
+
+  .table__con {
+
+    &.active {}
+  }
+
+  .table__nav {
+    margin-bottom: vw(48px);
+    // gap: vw(18px);
+
+    .tabs_btn {
+      border-width: vw(4px);
+      border-radius: vw(48px);
+      font-size: vw(24px);
+      padding: vw(14px) vw(22px);
+      margin: 0 vw(9px);
+
+      &::after {}
+
+
+      &.active {
+
+        &::before {
+          top: 99%;
+          width: vw(22px);
+          height: vw(17.5px);
+        }
+      }
+    }
+  }
+
+  .slider-exclusive {}
+
+  .splide__track {
+    max-width: vw(1300px);
+  }
+
+  .exclusive-card {
+    // gap: vw(143.5px);
+
+    .splide__slide {
+
+      &::after {
+        width: vw(15px);
+        height: vw(17px);
+        right: vw(-10px);
+      }
+    }
+
+    &__card-item {}
+
+    &__card-inner {}
+
+    &__title {
+      height: vw(35px);
+      font-size: vw(20px);
+      letter-spacing: vw(1.5px);
+
+      &-img {
+        width: vw(38px);
+        margin-right: vw(12px);
+      }
+    }
+
+    &__img {
+      max-width: vw(286px);
+      // width: vw(321px);
+      height: vw(590px);
+      // margin-top: vw(28px);
+      // margin-bottom: vw(29px);
+      margin: vw(28px) vw(72px) vw(29px)vw(72px);
+      border-radius: vw(30px);
+      border-width: vw(4px);
+    }
+
+    &__icon {
+      width: vw(30px);
+      height: vw(34.6px);
+      margin-top: vw(390px);
+    }
+
+    &__content {
+      font-size: vw(20px);
+      letter-spacing: vw(1.5px);
+    }
+  }
+  }
+
+  // 行動裝置大版Pad-1024
+  @include breakpoint(md) {
+    .exclusive-card, .binding-card {
+    &__title, &__content{
+      font-size: 13px;
+      letter-spacing: vw(1.2px);
+    }
+    }
+  }
+
+  // 小網-768
+  @include breakpoint(sm) {
+    padding-bottom: vwm(64px);
+
+    .section-title {
+      margin-bottom: vwm(120px);
+    }
+
+
+
+
+    //門號綁定
+    .con__table--box-binding {
+      max-width: vwm(700px);
+      margin: 0;
+    }
+
+    .table__nav__binding {
+      margin-bottom: vwm(23px);
+      // gap: vwm(43px);
+
+      .tabs_btn_binding {
+        border: vwm(5px) solid #909090;
+        border-radius: vwm(55px);
+        font-size: vwm(38px);
+        padding: vwm(23px) vwm(35px);
+        margin: 0 vwm(14px);
+
+        // &:first{
+        //   margin-left: 0;
+        // }
+
+
+        &.active {
+          &::before {
+            width: vwm(35px);
+            height: vwm(30px);
+          }
+        }
+
+        // @include breakpoint(xs) {
+        //   border: vwm(6px) solid #909090;
+        //   font-size: vwm(36px);
+        // }
+      }
+    }
+
+    .slider-binding {
+      margin: 0 auto;
+      .splide__pagination {
+        bottom: vwm(-40px);
+        // bottom: vwm(-9px);
+
+        li {
+          margin: 3px;
+
+          button {
+            background-color: #c3c3c3;
+            opacity: 1;
+            @include size(vwm(25px));
+
+            &.is-active {
+              background-color: #ff7673;
+              transform: scale(1);
+            }
+          }
+        }
+      }
+
+      .splide__pagination__page {
+        width: vwm(25px);
+        height: vwm(25px);
+        margin: vwm(9px);
+      }
+
+      .splide__slide {
+        &::after {
+          display: none;
+        }
+      }
+    }
+
+    .binding-card {
+      &__card-item {
+        height: 100%;
+      }
+
+      &__card-inner {
+        padding: vwm(58px) vwm(20px) vwm(32px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      &__title {
+        height: vwm(53px);
+        font-size: vwm(40.5px);
+
+        &-img {
+          width: vwm(60px);
+          margin-right: vwm(20px);
+        }
+      }
+
+      &__img {
+        max-width: vwm(500px);
+        height: vwm(1024px);
+        margin: vwm(32px) 0 vwm(60px) 0;
+        margin-top: vwm(32px);
+        margin-bottom: vwm(60px);
+        border-radius: vwm(40px);
+        border: vwm(8px) solid #541c22;
+      }
+
+      &__icon {
+        display: none;
+      }
+
+      &__content {
+        font-size: vwm(40.5px);
+      }
+    }
+
+
+
+
+
+    // 門號轉帳
+
+    .exclusive__inner{
+      margin-top: vwm(153px);
+      scroll-margin-top: vwm(70px);
+    }
+    .con__table--box {
+      max-width: vwm(700px);
+      margin: 0;
+    }
+
+    .table__nav {
+      margin-top: vwm(19px);
+      margin-bottom: vwm(60px);
+      // gap: vwm(43px);
+
+      .tabs_btn {
+        border: vwm(5px) solid #909090;
+        border-radius: vwm(55px);
+        font-size: vwm(38px);
+        padding: vwm(18px) vwm(35px) vwm(24px) vwm(35px);
+        margin: 0 vwm(14px);
+        // &:first{
+        //   margin-right: 0 vwm(18px)
+        // }
+
+
+        &.active {
+          &::before {
+            width: vwm(35px);
+            height: vwm(30px);
+          }
+        }
+
+        // @include breakpoint(xs) {
+        //   border: vwm(6px) solid #909090;
+        //   font-size: vwm(36px);
+        // }
+      }
+    }
+
+    .slider-exclusive {
+      margin: 0 auto;
+      .splide__pagination {
+        bottom: vwm(-50px);
+
+        li {
+          margin: 3px;
+
+          button {
+            background-color: #c3c3c3;
+            opacity: 1;
+            @include size(vwm(25px));
+
+            &.is-active {
+              background-color: #ff7673;
+              transform: scale(1);
+            }
+          }
+        }
+      }
+
+      .splide__pagination__page {
+        width: vwm(25px);
+        height: vwm(25px);
+        margin: vwm(9px);
+      }
+
+      .splide__slide {
+        &::after {
+          display: none;
+        }
+      }
+    }
+
+    .exclusive-card {
+      &__card-item {
+        height: 100%;
+      }
+
+      &__card-inner {
+        padding: vwm(58px) vwm(20px) vwm(32px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      &__title {
+        height: vwm(53px);
+        font-size: vwm(40.5px);
+
+        &-img {
+          width: vwm(60px);
+          margin-right: vwm(20px);
+        }
+      }
+
+      &__img {
+        max-width: vwm(500px);
+        height: vwm(1024px);
+        margin-top: vwm(32px);
+        margin-bottom: vwm(65px);
+        border-radius: vwm(40px);
+        border: vwm(8px) solid #541c22;
+      }
+
+      &__icon {
+        display: none;
+      }
+
+      &__content {
+        font-size: vwm(40.5px);
+      }
+    }
+
+    .splide__track {
+      display: block;
+      // justify-content: baseline!important;
+      // justify-content: ;
+    }
+  }
+
+  @include breakpoint(xs) {
+    scroll-margin-top: vwm(20px);
+  }
+}

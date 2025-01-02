@@ -1,0 +1,21 @@
+@function px-em($px, $base: 16) {
+  @return ($px / $base * 1em);
+}
+
+// Max breakpoint
+$pcrwd-breakpoint: 1420;
+// Function
+@function vw($target) {
+  // 1 vw is equal to 1% of the viewport width
+  $vw-context: ($pcrwd-breakpoint * 0.01) * 1px; // 1% viewport width
+  @return ($target/$vw-context) * 1vw;
+}
+
+
+$mblrwd-breakpoint: 768;
+// Function
+@function vwm($target) {
+  // 1 vw is equal to 1% of the viewport width
+  $vw-context: ($mblrwd-breakpoint * 0.01) * 1px; // 1% viewport width
+  @return ($target/$vw-context) * 1vw;
+}

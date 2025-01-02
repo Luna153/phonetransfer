@@ -1,0 +1,58 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: $white;
+  overflow-x: hidden;
+  font-family: $font-family;
+  &.scroll-fixed {
+    overflow: hidden;
+  }
+}
+
+.wrap {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  &__inner {
+    max-width: 1300px;
+    margin: 0 auto;
+
+    @include breakpoint(sm) {
+      padding: 0 $wrap-gap-sm;
+    }
+  }
+}
+
+img {
+  width: 100%;
+}
+
+.content {
+  overflow: hidden;
+  flex-grow: 1;
+
+  @include ie-only {
+    min-height: calc(100vh - #{$footer-height});
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    padding-top: $header-height-lg;
+
+    @include breakpoint(lg) {
+      padding-top: $header-height-sm;
+    }
+  }
+
+  &--no-padding {
+    > *:first-child {
+      padding-top: 0;
+    }
+  }
+}

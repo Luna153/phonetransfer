@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+// generall setting
+@import "vendors/reset";
+@import "vendors/variables";
+@import "vendors/typography";
+@import "vendors/mixins";
+@import "vendors/function";
+
+@import "vendors/bootstrap4/bootstrap-grid.scss"; // grid system
+
+//layout
+@import "layout/header";
+@import "layout/footer";
+@import "layout/layout";
+
+//component
+@import "component/public";
+@import "component/keyframe";
+@import "component/toggle";
+@import "component/animate";
+@import "component/form";
+@import "component/js-animate";
+
+//pages
+@import "pages/index";
+@import "pages/section-kv"; //banner
+@import "pages/section-mission"; //mission
+@import "pages/section-process"; //process
+@import "pages/section-download"; //download
+@import "pages/section-faq"; //FAQ
+@import "pages/section-notice"; //notice

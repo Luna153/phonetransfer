@@ -1,0 +1,184 @@
+footer {
+  width: 100%;
+  background-color: #254A91;
+
+  .footer-content {
+    padding: 19px 0;
+
+    @include breakpoint(sm) {
+      padding: vwm(28px) vwm(24px);
+    }
+  }
+
+  p {
+    letter-spacing: 0.03em;
+    // line-height: 3;
+    color: #fff;
+    font-size: px-em(13);
+    line-height: px-em(24, 16);
+    text-align: center;
+    margin: 0 auto;
+  }
+  .footer_mb{
+    display: none;
+  }
+
+  a {
+    text-decoration: underline;
+    padding: 0px 8px;
+  }
+
+  .copyright-logo-text {
+    display: inline-flex;
+    align-items: center;
+
+    .sinopac-icon {
+      margin: 0 10px;
+      @include size(22px, 22px);
+
+      @include breakpoint(sm) {
+        width: vwm(22px);
+        margin: 0 vwm(10px);
+      }
+    }
+  }
+}
+
+// 浮動按鈕
+.fixedIcon {
+  &__mobile {
+    display: none;
+  }
+
+  &__area {
+    position: fixed;
+    bottom: 10%;
+    right: 3%;
+    z-index: 10;
+    // right: 6.4%;
+  }
+
+  &__btn {
+    position: relative;
+    margin: 10px 0;
+
+    &:hover {
+      transition: transform 0.2s;
+      transform: scale(1.05);
+    }
+
+    img {
+      width: 168px;
+    }
+
+    span {
+      position: absolute;
+      font-size: 40px;
+      color: #fff;
+      text-align: center;
+      left: 50%;
+      top: 50%;
+      transform: translate(-55%, -52%);
+      line-height: 1.2;
+    }
+  }
+
+}
+
+// web中版-1420
+@include breakpoint(xl) {
+  .fixedIcon {
+    &__area {
+      bottom: 5%;
+      right: 2%;
+    }
+    &__btn {
+      margin: vw(10px) 0;
+
+      img {
+        width: vw(168px);
+      }
+
+      span {
+        font-size: vw(40px);
+      }
+    }
+  }
+}
+
+// 行動裝置大版Pad-1024
+@include breakpoint(md) {}
+
+// 小網-768
+@include breakpoint(sm) {
+  footer {
+    position: fixed;
+    bottom: 0;
+    z-index: 11;
+
+    p {
+      font-size: vwm(31px);
+      line-height: vwm(44px);
+      word-break: none;
+
+      span {
+        display: none;
+      }
+
+      a {
+        display: none;
+      }
+    }
+    .footer_tb{
+      display: none;
+    }
+    .footer_mb{
+      display: block;
+    }
+  }
+
+  .fixedIcon {
+    &__area {
+      display: none;
+    }
+
+    &__mobile {
+      display: flex;
+      justify-content: space-around;
+      background-color: #db4b4b;
+      min-height: vwm(97.5px);
+    }
+
+    &__btn_sm {
+      @include flex-center;
+      flex: 1;
+
+      a {
+        display: flex;
+        align-items: center;
+        font-size: vwm(45px);
+        color: #fff;
+        margin-left: vwm(11px);
+        text-decoration: none;
+        &::after{
+          content: '';
+          width: vwm(17px);
+          height: vwm(24px);
+          margin-left: vwm(21px);
+          background-image: url('../images/icon_footer_arrow.svg');
+          background-position: center;
+          background-size: contain;
+          background-repeat: no-repeat;
+          z-index: 2;
+          animation: slideInOutX 1s infinite;
+        }
+      }
+    }
+  }
+
+  .fixedIcon__mobile .fixedIcon__btn_sm:first-child {
+    border-right: vwm(4px) solid #fff;
+  }
+
+
+}

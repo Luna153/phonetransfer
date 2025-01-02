@@ -1,0 +1,236 @@
+.section-download {
+  padding-top: 0;
+  padding-bottom: 36px;
+  background: #FFEEFC url('../images/arc-bottom.svg') no-repeat;
+  background-size: 1920px auto;
+  background-position: top center;
+  // z-index: 2;
+
+  .section-title {
+    margin-top: 80px;
+  }
+
+
+  &__wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 95px;
+  }
+
+  &__wrap-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    width: 544px;
+    border-radius: 20px;
+    border: 5px solid #541C22;
+    padding: 32px 46px 35px 46px;
+    margin: 0 29px;
+
+    &:last-child {
+      .section-download__icon {
+        animation: glitter 5s linear 9s infinite normal;
+        animation-delay: 800ms;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 21px;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 27px;
+    right: 160px;
+    width: 27px;
+    height: 27px;
+    background-image: url('../images/icon_download_shine.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: glitter 5s linear 9s infinite normal;
+  }
+
+  &__wrap-content {
+    width: 440px;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__qrcode {
+    width: 200px;
+    height: 200px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__btns {
+    width: 227px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__btn {
+    &:first-child {
+      margin-bottom: 18px;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    background-size: 100% auto;
+  }
+
+  // web中版-1420
+  @include breakpoint(xl) {
+    // min-height: vw(700px);
+    // margin-bottom: vw(-150px);
+    margin-top: vw(55px);
+    .section-title {
+      margin-top: vw(80px);
+    }
+
+    &__wrap {
+      margin-top: vw(95px);
+    }
+
+    &__wrap-box {
+      width: vw(544px);
+      border-radius: vw(20px);
+      border-width: vw(5px);
+      padding: vw(35px) vw(46px) vw(35px) vw(46px);
+      margin: 0 vw(29px);
+
+    }
+
+    &__title {
+      font-size: vw(21px);
+      margin-bottom: vw(19px);
+    }
+
+    &__icon {
+      top: vw(27px);
+      right: vw(160px);
+      width: vw(27px);
+      height: vw(27px);
+    }
+
+    &__wrap-content {
+      width: vw(440px);
+      height: vw(200px);
+    }
+
+    &__qrcode {
+      width: vw(200px);
+      height: vw(200px);
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__btns {
+      width: vw(227px);
+      height: vw(200px);
+    }
+
+    &__btn {
+      &:first-child {
+        margin-bottom: vw(18px);
+      }
+    }
+
+  }
+
+  // 行動裝置大版Pad-1024
+  @include breakpoint(md) {}
+
+  // 小網-768
+  @include breakpoint(sm) {
+    scroll-margin-top: vwm(40px);
+    padding-bottom: vwm(60px);
+    background: #FFEEFC ;
+
+    .section-title {
+      margin-top: vwm(61px);
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      width: 110%;
+      min-width: 768px;
+      height: vwm(1050px);
+      // background: url('../images/bg_download-curve.svg') no-repeat;
+      background-position: top center;
+      background-size: cover;
+      position: absolute;
+      top: -2px;    }
+
+    &__wrap {
+      flex-direction: column;
+      align-items: center;
+      margin-top: vwm(98px);
+    }
+
+    &__wrap-box {
+      width: vwm(707px);
+      height: vwm(585px);
+      border-radius: vwm(20px);
+      border: vwm(7px) solid $black;
+      padding: vwm(55px) vwm(92px) vwm(67px) vwm(94px);
+
+      &:first-child {
+        margin-bottom: vwm(56px);
+      }
+
+    }
+
+    &__title {
+      font-size: vwm(54px);
+    }
+
+    &__icon {
+      top: vwm(46px);
+      right: vwm(137px);
+      width: vwm(40.7px);
+      height: vwm(40.7px);
+    }
+
+    &__wrap-content {
+      width: vwm(500px);
+      height: vwm(340px);
+    }
+
+    &__qrcode {
+      display: none;
+    }
+
+    &__btns {
+      width: 100%;
+    }
+
+    &__btn {
+      &:first-child {
+        margin-bottom: vwm(39px);
+      }
+    }
+  }
+
+  @include breakpoint(xs) {
+    scroll-margin-top: vwm(20px);
+  }
+}

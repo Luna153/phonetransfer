@@ -1,0 +1,17 @@
+// 更多使用過的字體資源請查看font資料夾
+// 交付前將未使用之字體資源刪除
+// 圓體
+@font-face {
+  font-family: 'MaruM';
+  font-style: normal;
+  // font-weight: 400;
+  font-display: swap;
+  src: url('../font/GenSenRoundedTW-M.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'MaruR';
+  font-style: normal;
+  // font-weight: 800;
+  font-display: swap;
+  src: url('../font/GenSenRoundedTW-R.ttf') format('truetype');
+}

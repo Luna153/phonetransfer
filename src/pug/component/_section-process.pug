@@ -1,0 +1,176 @@
+//- section
+mixin section-process()
+  section.section.section-process#section-process
+    .wrap__inner
+
+
+      .center.binding__inner
+        h2.section-title 門號綁定
+      .con__tableBox-binding
+        .con__table--box-binding
+          ul.table__nav__binding
+            li.tabs_btn_binding.active.noto-400(data-tab='tab-bank') 行動銀行 APP
+            li.tabs_btn_binding.noto-400(data-tab='tab-dawho') DAWHO APP
+
+          //- 行動銀行 APP
+          #tab-bank.table__con__binding.active
+            .splide.slider-binding
+              .splide__track
+                ol.binding-card.splide__list
+                  .splide__slide(data-aos="fade-up" data-aos-duration="1200")
+                    li.binding-card__card-item
+                      .binding-card__card-inner
+                        .binding-card__title
+                          img.binding-card__title-img(src="images/text-01.svg" alt="點選主選單")
+                          p.noto-400 點選主選單
+                        img.binding-card__img(src="images/pic/bind_mobile-1.png" alt="請點選APP首頁左上角")
+                        .binding-card__content 請點選APP首頁左上角
+                  .splide__slide(data-aos="fade-up" data-aos-duration="1600")
+                    li.binding-card__card-item
+                      .binding-card__card-inner
+                        .binding-card__title
+                          img.binding-card__title-img(src="images/text-02.svg" alt="手機門號轉帳設定")
+                          p.noto-400 手機門號轉帳設定
+                        img.binding-card__img(src="images/pic/bind_mobile-2.png" alt="請點選「申請/設定服務」裡的手機門號轉帳設定")
+                        .binding-card__content.noto-400 請點選「申請/設定服務」裡的
+                          |
+                          br
+                          |手機門號轉帳設定
+                  .splide__slide(data-aos="fade-up" data-aos-duration="2000")
+                    li.binding-card__card-item
+                      .binding-card__card-inner
+                        .binding-card__title
+                          img.binding-card__title-img(src="images/text-03.svg" alt="依步驟操作")
+                          p.noto-400 依步驟操作
+                        img.binding-card__img(src="images/pic/bind_mobile-3.png" alt="開始綁定")
+                        .binding-card__content.noto-400 開始綁定
+                  .splide__slide(data-aos="fade-up" data-aos-duration="2000")
+                    li.binding-card__card-item
+                      .binding-card__card-inner
+                        .binding-card__title
+                          img.binding-card__title-img(src="images/text-04.svg" alt="綁定結果畫面")
+                          p.noto-400 綁定結果畫面
+                        img.binding-card__img(src="images/pic/bind_mobile-4.png" alt="綁定成功")
+                        .binding-card__content.noto-400 綁定成功
+          //- DAWHO APP
+          #tab-dawho.table__con__binding
+            .splide.slider-binding
+              .splide__track
+                ol.binding-card.splide__list
+                  .splide__slide(data-aos="fade-up" data-aos-duration="1200")
+                    li.binding-card__card-item
+                      .binding-card__card-inner
+                        .binding-card__title
+                          img.binding-card__title-img(src="images/text-01-black.svg" alt="點選更多")
+                          p.noto-400 點選更多
+                        img.binding-card__img(src="images/pic/bind_dawho-1.png" alt="請在APP首頁下方點選“更多”")
+                        .binding-card__content.noto-400 請在APP首頁下方點選“更多”
+                  .splide__slide(data-aos="fade-up" data-aos-duration="1600")
+                    li.binding-card__card-item
+                      .binding-card__card-inner
+                        .binding-card__title
+                          img.binding-card__title-img(src="images/text-02-black.svg" alt="手機門號轉帳設定")
+                          p.noto-400 手機門號轉帳設定
+                        img.binding-card__img(src="images/pic/bind_dawho-2.png" alt="請點選「設定」裡的手機門號轉帳設定")
+                        .binding-card__content.noto-400 請點選「設定」裡的
+                          |
+                          br
+                          | 手機門號轉帳設定
+                  .splide__slide(data-aos="fade-up" data-aos-duration="2000")
+                    li.binding-card__card-item
+                      .binding-card__card-inner
+                        .binding-card__title
+                          img.binding-card__title-img(src="images/text-03-black.svg" alt="依步驟操作")
+                          p.noto-400 依步驟操作
+                        img.binding-card__img(src="images/pic/bind_dawho-3.png" alt="立即綁定")
+                        .binding-card__content.noto-400 立即綁定
+                  .splide__slide(data-aos="fade-up" data-aos-duration="2000")
+                    li.binding-card__card-item
+                      .binding-card__card-inner
+                        .binding-card__title
+                          img.binding-card__title-img(src="images/text-04-black.svg" alt="綁定結果畫面")
+                          p.noto-400 綁定結果畫面
+                        img.binding-card__img(src="images/pic/bind_dawho-4.png" alt="綁定成功")
+                        .binding-card__content.noto-400 綁定成功
+
+
+
+
+
+
+
+      .center.exclusive__inner#section-transfer
+        h2.section-title 門號轉帳
+      .con__tableBox
+        .con__table--box
+          ul.table__nav
+            li.tabs_btn.active.noto-400(data-tab='tab-nonCustomer') 行動銀行 APP
+            li.tabs_btn.noto-400(data-tab='tab-customer') DAWHO APP
+
+          //- 行動銀行 APP
+          #tab-nonCustomer.table__con.active
+            .splide.slider-exclusive
+              .splide__track
+                ol.exclusive-card.splide__list
+                  .splide__slide(data-aos="fade-up" data-aos-duration="1200")
+                    li.exclusive-card__card-item
+                      .exclusive-card__card-inner
+                        .exclusive-card__title
+                          img.exclusive-card__title-img(src="images/text-01.svg" alt="點選轉帳")
+                          p.noto-400 點選轉帳
+                        img.exclusive-card__img(src="images/pic/transfer_mobile-1.png" alt="請在APP首頁下方點選“轉帳”")
+                        .exclusive-card__content.noto-400 請在APP首頁下方點選“轉帳”
+                  .splide__slide(data-aos="fade-up" data-aos-duration="1600")
+                    li.exclusive-card__card-item
+                      .exclusive-card__card-inner
+                        .exclusive-card__title
+                          img.exclusive-card__title-img(src="images/text-02.svg" alt="選擇門號轉帳")
+                          p.noto-400 選擇門號轉帳
+                        img.exclusive-card__img(src="images/pic/transfer_mobile-2.png" alt="請填寫轉帳資訊")
+                        .exclusive-card__content.noto-400 請填寫轉帳資訊
+                  .splide__slide(data-aos="fade-up" data-aos-duration="2000")
+                    li.exclusive-card__card-item
+                      .exclusive-card__card-inner
+                        .exclusive-card__title
+                          img.exclusive-card__title-img(src="images/text-03.svg" alt="完成交易")
+                          p.noto-400 完成交易
+                        img.exclusive-card__img(src="images/pic/success.png" alt="交易成功")
+                        .exclusive-card__content.noto-400 交易成功
+          //- DAWHO APP
+          #tab-customer.table__con
+            .splide.slider-exclusive
+              .splide__track
+                ol.exclusive-card.splide__list
+                  .splide__slide(data-aos="fade-up" data-aos-duration="1200")
+                    li.exclusive-card__card-item
+                      .exclusive-card__card-inner
+                        .exclusive-card__title
+                          img.exclusive-card__title-img(src="images/text-01-black.svg" alt="點選常用")
+                          p.noto-400 點選常用
+                        img.exclusive-card__img(src="images/pic/transfer_dawho-1.png" alt="請在APP首頁下方點選“常用”再選擇“轉帳”")
+                        .exclusive-card__content
+                          p.noto-400 請在APP首頁下方點選“常用”
+                            |
+                            br
+                            | 再選擇“轉帳”
+                  .splide__slide(data-aos="fade-up" data-aos-duration="1600")
+                    li.exclusive-card__card-item
+                      .exclusive-card__card-inner
+                        .exclusive-card__title
+                          img.exclusive-card__title-img(src="images/text-02-black.svg" alt="選擇門號轉帳")
+                          p.noto-400 選擇門號轉帳
+                        img.exclusive-card__img(src="images/pic/transfer_dawho-2.png" alt="請填寫轉帳資訊")
+                        .exclusive-card__content.noto-400 請填寫轉帳資訊
+                  .splide__slide(data-aos="fade-up" data-aos-duration="2000")
+                    li.exclusive-card__card-item
+                      .exclusive-card__card-inner
+                        .exclusive-card__title
+                          img.exclusive-card__title-img(src="images/text-03-black.svg" alt="完成交易")
+                          p.noto-400 完成交易
+                        img.exclusive-card__img(src="images/pic/success.png" alt="交易成功")
+                        .exclusive-card__content.noto-400 交易成功
+
+
+
+
+

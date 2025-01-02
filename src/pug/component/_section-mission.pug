@@ -1,0 +1,135 @@
+//- section
+mixin section-mission()
+  section.section.section-mission#section-mission
+    .wrap__inner-mission
+      center
+        h2.section-title 活動任務
+
+      //- 任務-新朋友綁定轉帳
+      .wrap__inner-mission--friend.frame
+        h3.wrap__inner-mission_title.wrap__inner-mission--friend_title.noto-700 任務-新朋友綁定轉帳
+        .wrap__inner-mission_order
+          .wrap__inner-mission_order-step.noto-700
+            img.move(src="images/img_mission-friend.svg" alt="")
+            .wrap__inner-mission_order-step--text.navy-blue
+              p.number.barlow-condensed-500 01
+              p 門號綁定
+            a.wrap__inner-mission_order-step--btn.noto-500(href='#section-process' title='如何綁定') 如何綁定
+              img(src="images/img_btn-arrow.svg" alt="arrow")
+
+          .wrap__inner-mission_order-step.noto-700
+            img.move(src="images/img_mission-friend.svg" alt="")
+            .wrap__inner-mission_order-step--text.navy-blue
+              p.number.barlow-condensed-500 02
+              p 門號轉帳
+            a.wrap__inner-mission_order-step--btn.noto-500(href='#section-transfer' title='如何轉帳') 如何轉帳
+              img(src="images/img_btn-arrow.svg" alt="arrow")
+
+        .wrap__inner-mission_illustrate
+          .wrap__inner-mission_illustrate-content
+            h4.wrap__inner-mission--friend_bg 參加條件
+              .triangle-right
+            p 活動前未進行門號綁定設定且近6個月未使用過門號轉帳進行轉出交易者
+          .wrap__inner-mission_illustrate-content
+            h4.wrap__inner-mission--friend_bg 任務內容
+              .triangle-right
+            p.adjust
+              |於活動期間完成手機門號綁定設定且完成1筆不限金額手機門號轉出交易，即可獲得
+              span.focus|現金回饋68元
+              |，每戶至多回饋一次，限量1,000名。需登錄活動，額滿為止。
+
+
+      //- 任務-成為門轉達人
+      .wrap__inner-mission--become.frame
+        img.buckle-left(src="images/img_mission-buckle.svg" alt="")
+        img.buckle-right(src="images/img_mission-buckle.svg" alt="")
+        h3.wrap__inner-mission_title.wrap__inner-mission--become_title.noto-700 任務-成為門轉達人
+        .wrap__inner-mission_order
+          .wrap__inner-mission_order-step
+            img.move(src="images/img_mission-become.svg" alt="")
+            .wrap__inner-mission_order-step--text.blue-green.noto-700
+              p.number.barlow-condensed-500 01
+              p 門號綁定
+            a.wrap__inner-mission_order-step--btn.noto-500(href='#section-process' title='如何綁定') 如何綁定
+              img(src="images/img_btn-arrow.svg" alt="arrow")
+
+          .wrap__inner-mission_order-step
+            img.move(src="images/img_mission-become.svg" alt="")
+            .wrap__inner-mission_order-step--text.blue-green.noto-700
+              p.number.barlow-condensed-500 02
+              p 門號轉帳
+            a.wrap__inner-mission_order-step--btn.noto-500(href='#section-transfer' title='如何轉帳') 如何轉帳
+              img(src="images/img_btn-arrow.svg" alt="arrow")
+
+        .wrap__inner-mission_illustrate
+          .wrap__inner-mission_illustrate-content
+            h4.wrap__inner-mission--become_bg 參加條件
+              .triangle-right
+            p 活動前未進行門號綁定設定者
+          .wrap__inner-mission_illustrate-content
+            h4.wrap__inner-mission--become_bg 任務內容
+              .triangle-right
+            p
+              |於活動期間完成手機門號綁定設定且完成3筆不限金額手機門號轉出交易，即可獲得
+              span.focus|現金回饋100元
+              |，每戶至多回饋一次，限量1,000名。  需登錄活動，額滿為止。
+              br
+              span.hint *新朋友完成『新朋友綁定轉帳任務』後再接續完成2筆轉出交易就有機會再獲得此任務之現金回饋
+
+      //- 回饋計算舉例說明
+      .wrap__inner-mission--example.frame
+        img.buckle-left(src="images/img_mission-buckle.svg" alt="")
+        img.buckle-right(src="images/img_mission-buckle.svg" alt="")
+        h3.wrap__inner-mission_title.wrap__inner-mission--example_title.noto-700 回饋計算舉例說明
+        .wrap__inner-mission--example_detail
+          h4.wrap__inner-mission--example_detail-title 情境一
+          .wrap__inner-mission--example_detail-text
+            p
+              |小永活動前6個月都沒有使用過門號轉帳進行轉出交易，他在4/15綁定、6/26解綁、6/28再次綁定，6/29完成3筆轉出交易，享
+              span|回饋68元
+              |(新朋友任務:第一筆轉出交易時間於1,000名內)+
+              span|100元
+              |(門轉達人任務:第三筆轉出交易時間於1,000名內)。
+        .wrap__inner-mission--example_detail
+          h4.wrap__inner-mission--example_detail-title 情境二
+          .wrap__inner-mission--example_detail-text
+            p
+              |小豐活動前6個月都沒有使用過門號轉帳進行轉出交易，他在4/15綁定、6/26解綁、6/28再次綁定，6/29完成2筆轉出交易，享
+              span|回饋68元
+              |(新朋友任務:第一筆轉出交易時間於1,000名內)。
+        .wrap__inner-mission--example_detail
+          h4.wrap__inner-mission--example_detail-title 情境三
+          .wrap__inner-mission--example_detail-text
+            p
+              |小門今年3月份的時候有使用過門號轉帳進行轉出交易，活動前未進行門號綁定設定，他在6/29完成綁定及5筆轉出交易，享
+              span|回饋100元
+              |(門轉達人任務:第三筆轉出交易時間於1,000名內)。
+        .wrap__inner-mission--example_detail
+          h4.wrap__inner-mission--example_detail-title 情境四
+          .wrap__inner-mission--example_detail-text
+            p
+              |小轉今年1月份的時候有使用過門號轉帳進行轉出交易，他在3/22綁定、6/27解綁(活動期間) 、6/27再次綁定，7/2完成3筆轉出交易，
+              span|不符合回饋資格
+              |(因活動期間已為綁定狀態)。
+
+
+    .section-mission--pattern-right.hidden-min
+      .section-mission--pattern-right__pic.para-Right(data-speed=".1")
+        img(src="images/img_mission-umbrella-lg.svg" alt="")
+      .section-mission--pattern-right__pic.para-Right(data-speed=".05")
+        img(src="images/img_mission-starB.svg" alt="")
+      .section-mission--pattern-right__pic.para-Right(data-speed=".02")
+        img(src="images/img_mission-crane.svg" alt="")
+      .section-mission--pattern-right__pic.para-Left(data-speed=".1")
+        img(src="images/img_mission-dot.svg" alt="")
+
+    .section-mission--pattern-left.hidden-min
+      .section-mission--pattern-left__pic.para-Left(data-speed=".05")
+        img(src="images/img_mission-starY.svg" alt="")
+      .section-mission--pattern-left__pic.para-Left(data-speed=".1")
+        img(src="images/img_mission-umbrella-sm.svg" alt="")
+      .section-mission--pattern-left__pic.para-Left(data-speed=".05")
+        img(src="images/img_mission-starP.svg" alt="")
+
+    //- .section-mission--pattern-bg
+      //- img(src="images/img_mission-dot.svg" alt="")

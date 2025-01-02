@@ -1,0 +1,72 @@
+mixin section-kv()
+  section.section.section-kv#section-kv
+    .wrap__inner-kv.center
+      .wrap__inner-kv_master-title
+        //- img(src="images/img_kv-text1.svg" alt="門轉享好康")
+        img(src="images/img_kv-title1.svg" alt="門轉享好康")
+        img(src="images/img_kv-title2.svg" alt="門轉享好康")
+        img(src="images/img_kv-title3.svg" alt="門轉享好康")
+        img(src="images/img_kv-title4.svg" alt="門轉享好康")
+        img(src="images/img_kv-title5.svg" alt="門轉享好康")
+      .wrap__inner-kv_master-price
+        img(src="images/img_kv-text2.svg" alt="168元")
+      .wrap__inner-kv_master-person
+        object(data="images/img_kv-person.svg", type="image/svg+xml")
+      .wrap__inner-kv_master-text.maruM 最高回饋
+      .wrap__inner-kv_master-cash.box.maruM 完成任務拿現金回饋
+      .wrap__inner-kv_master-time.box.maruM 即日起至2024/10/11
+      .wrap__inner-kv_master-phone.box.maruM 手機門號即為銀行帳戶
+      form#apply-form.wrap__inner-kv_login
+        .wrap__inner-kv_login-direction.maruM
+          h1.wrap__inner-kv_login-direction__title.noto-700 立即登錄活動
+            .triangle-left
+            .triangle-right
+        .wrap__inner-kv_login-text
+          .wrap__inner-kv_login-text--type
+            input(type="text" id='target' maxlength="10" placeholder="身分證統一編號")
+            label(for="id")
+          .wrap__inner-kv_login-text--type
+            input(type="text" id='name' maxlength="10" placeholder="姓名")
+            label(for="name")
+          .wrap__inner-kv_login-text-verify
+            input#captcha-val.input-code(type="text" placeholder="圖形驗證碼")
+            .verification-code#update-captcha
+              img#captcha-img(src='https://mma.sinopac.com/EventSiteApi/CaptchaImage.ashx' alt='更新驗證碼')
+              //- img#captcha-img(src='http://10.11.36.36/EventSiteApi/CaptchaImage.ashx' alt='更新驗證碼')
+        .wrap__inner-kv_login-check
+          input#notice-content(type='checkbox' name='notice-content' value='comfirm-notice')
+          label(for="notice-content") 本人已詳閱「
+            a.link-text(href="https://reurl.cc/v00OMo" target="_blank" rel="noopener noreferrer") 永豐銀行個人資料蒐集、處理及利用告知義務內容
+            | 」並同意永豐銀行蒐集、處理或利用個人資料，請按「活動登錄」。永豐銀行將於辦理本活動之目的範圍內，蒐集、處理、利用個人資料。
+        .wrap__inner-kv_login-btn-wrap.noto-400
+          button#sendReq.flex-center(type="submit" value='活動登錄') 活動登錄
+            img(src="images/img_btn-arrow.svg" alt="")
+
+    .section-kv--pattern-right.hidden-min
+      .section-kv--pattern-right__pic.para-Right(data-speed=".25")
+        img(src="images/img_kv-leaf.svg" alt="")
+      .section-kv--pattern-right__pic
+        img(src="images/img_kv-light.svg" alt="")
+      .section-kv--pattern-right__pic.para-Right(data-speed=".5")
+        img(src="images/img_kv-white_dot.svg" alt="")
+      .section-kv--pattern-right__pic.para-Right(data-speed=".1")
+        img(src="images/img_kv-starfish.svg" alt="")
+      .section-kv--pattern-right__pic
+        img(src="images/img_kv-pink_sm.svg" alt="")
+      .section-kv--pattern-right__pic
+        img(src="images/img_kv-white_sm.svg" alt="")
+
+    .section-kv--pattern-left.hidden-min
+      .section-kv--pattern-left__pic
+        img(src="images/img_kv-swim.svg" alt="")
+      .section-kv--pattern-left__pic.para-Left(data-speed=".4")
+        img(src="images/img_kv-parasol.svg" alt="")
+      .section-kv--pattern-left__pic.para-Left(data-speed=".25")
+        img(src="images/img_kv-ball.svg" alt="")
+      .section-kv--pattern-left__pic.para-Left(data-speed=".2")
+        img(src="images/img_kv-pink_dot.svg" alt="")
+      .section-kv--pattern-left__pic
+        img(src="images/img_kv-white_sm.svg" alt="")
+      .section-kv--pattern-left__pic
+        img(src="images/img_kv-white_sm.svg" alt="")
+

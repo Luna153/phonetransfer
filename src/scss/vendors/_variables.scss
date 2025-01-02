@@ -1,0 +1,144 @@
+// breakpoint
+$pcrwd-breakpoint: 1160 !default;
+$mblrwd-breakpoint: 768 !default;
+
+// Name Space
+$namespace: '' !default;
+
+// Path
+
+$image-path: '../images/' !default;
+$font-path: '../font/' !default;
+
+$grid-gutter-width: 1.5rem !default;
+$grid-breakpoints: (
+  xxs: 320px,
+  xs: 375px,
+  sm: 768px,
+  ssm: 991px,
+  md: 1024px,
+  lg: 1279px,
+  xl: 1420px
+) !default;
+
+// Color system
+
+$blue: #0065c1 !default;
+$red: #ff0000 !default;
+$pink: #f03a3a !default;
+$pink-100: #fa3444 !default;
+$yellow: #faaa00 !default;
+$orange-100: #f18b26 !default;
+$orange-200: #ed6a1c !default;
+$orange-300: #ea5219 !default;
+$orange-400: #da572b !default;
+$orange-500: #e35237 !default;
+$orange-600: #d46330 !default;
+$orange-700: #da572a !default;
+
+$white: #fff !default;
+$gray-100: #ededed !default;
+$gray-150: #e5e5e5 !default;
+$gray-200: #a3a3a3 !default;
+$gray-300: #4e4d4d !default;
+$gray-400: #323333 !default;
+$black: #010000 !default;
+$beige-100: #f2eeeb !default;
+$beige-150: #efe3d8 !default;
+$brown: #b15327 !default;
+$brown-100: #d46331 !default;
+$brown-200: #ab5227 !default;
+
+$primary: $gray-400 !default;
+$secondary-orange: $orange-400 !default;
+$disabled: rgba($black, 0.25) !default;
+
+$bg-gray: $gray-100 !default;
+$bg-gray-100: $gray-100 !default;
+$bg-gray-150: $gray-150 !default;
+$bg-gray-200: $gray-200 !default;
+$bg-beige-100: $beige-100 !default;
+$bg-beige-150: $beige-150 !default;
+
+$bg-popup: rgba($black, 0.6) !default;
+
+// Fonts
+
+$custom-font-en: 'Arial', '微軟正黑體' !default;
+$custom-font-en-2: 'Verdana', 'Arial' !default;
+$custom-font-en-3: 'Roboto', 'Arial' !default;
+$custom-font-cht: 'Noto Sans TC', sans-serif !default;
+
+$font-family: '微軟正黑體', 'Noto Sans TC', sans-serif, 'Noto Sans TC', Arial, Helvetica, sans-serif;
+// $font-family: $custom-font-en, $custom-font-cht, "微軟正黑體", "新細明體", Arial, Helvetica, sans-serif !default;
+
+$font-size-base: 16px !default;
+$font-size-xs: $font-size-base * (12/16) !default;
+$font-size-sm: $font-size-base * (14/16) !default;
+$font-size-lg: $font-size-base * 1.5 !default;
+
+$line-height-base: 1.5 !default;
+
+$bold: 700 !default;
+
+$icon-size-xxl: 50px !default;
+$icon-size-md: 24px !default;
+$icon-size-sm: 20px !default;
+
+// Cubic
+
+$cubic: cubic-bezier(0.77, 0.2, 0.05, 1) !default;
+$cubic2: cubic-bezier(0.23, 1, 0.32, 1) !default;
+$cubic-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275) !default;
+
+// Layout
+
+$header-height-sm: 60px !default;
+$header-height-lg: 90px !default;
+
+$footer-height: 64px !default;
+
+$gap-base-unit: 4px !default; // 間距最小單位
+$gap: $gap-base-unit * 3 !default; // 一般間距 (12px)
+$spacer: $gap-base-unit;
+$spacers: (
+  0: 0,
+  1: $spacer,
+  2: $spacer * 2,
+  3: $spacer * 3,
+  4: $spacer * 4,
+  5: $spacer * 5,
+  6: $spacer * 6,
+  7: $spacer * 7,
+  8: $spacer * 8,
+  9: $spacer * 9
+);
+
+$wrap-gap-sm: 15px !default;
+$wrap-gap-lg: 24px !default;
+
+// z-index
+$z-header: 8;
+$z-mobile-drawer: 9;
+$z-lightbox: 10;
+
+// Shadow
+
+// $shadow:  0px 2px 8px rgba($black, 0.1) !default;
+$shadow:
+  0 -1px 0 0 rgba($black, 0.04),
+  0 1px 2px 0 rgba($black, 0.06),
+  0 3px 6px 0 rgba($black, 0.06);
+
+// Radius
+
+$radius: $gap-base-unit !default;
+$radius-lg: $radius * 2 !default;
+
+// Lightbox
+$lightbox-size-sm: 400px !default; // 小的 lightbox 寬度尺寸
+$lightbox-size-m: 460px !default; // 中的 lightbox 寬度尺寸
+
+// Input
+$input-height: 34px !default;
+

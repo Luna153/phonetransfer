@@ -1,0 +1,19 @@
+extends _layout.pug
+
+append vars
+
+block content
+  main.index
+    //- KV
+    +section-kv()
+    //- mission
+    +section-mission()
+    //- process
+    +section-process()
+    //- download
+    +section-download()
+    //- 常見問題
+    +section-faq()
+    //- 注意事項
+    +section-notice()
+

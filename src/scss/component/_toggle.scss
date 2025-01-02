@@ -1,0 +1,143 @@
+.toggle {
+  &__trigger {
+    transition: opacity 0.25s $cubic;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+    &-icon {
+      transition: transform 0.3s $cubic;
+
+      .toggle--active & {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+  &__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s $cubic;
+
+    &[data-toggle-line] {
+      max-height: none;
+    }
+
+    .#{$namespace}toggle--active & {
+      max-height: fit-content;
+      -webkit-line-clamp: inherit;
+      animation: visible 0.1s 0.35s both;
+
+      @at-root .toggle--visible#{&} {
+        animation: fadeIn 0.35s 0.1s backwards;
+        overflow: visible;
+      }
+    }
+  }
+}
+
+.header-toggle {
+  &__content {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s $cubic;
+
+    &[data-toggle-line] {
+      max-height: none;
+    }
+
+    .#{$namespace}toggle--active & {
+      max-height: 2000px;
+      color: $white;
+      -webkit-line-clamp: inherit;
+      animation: visible 0.1s 0.35s both;
+      .header-toggle__item {
+        padding: 1.375em 15px;
+        display: block;
+        line-height: 1;
+      }
+
+      @at-root .toggle--visible#{&} {
+        animation: fadeIn 0.35s 0.1s backwards;
+        overflow: visible;
+      }
+    }
+  }
+}
+
+@keyframes visible {
+  to {
+    overflow: visible;
+  }
+}
+
+.toggle {
+  &__trigger {
+    transition: opacity 0.25s $cubic;
+    cursor: pointer;
+    &-icon {
+      transition: transform 0.3s $cubic;
+
+      .toggle--active & {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+  &__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s $cubic;
+
+    &[data-toggle-line] {
+      max-height: none;
+    }
+
+    .#{$namespace}toggle--active & {
+      max-height: fit-content;
+      -webkit-line-clamp: inherit;
+      animation: visible 0.1s 0.35s both;
+
+      @at-root .toggle--visible#{&} {
+        animation: fadeIn 0.35s 0.1s backwards;
+        overflow: visible;
+      }
+    }
+  }
+}
+
+.header-toggle {
+  &__content {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s $cubic;
+
+    &[data-toggle-line] {
+      max-height: none;
+    }
+
+    .#{$namespace}toggle--active & {
+      max-height: 2000px;
+      color: $white;
+      -webkit-line-clamp: inherit;
+      animation: visible 0.1s 0.35s both;
+      .header-toggle__item {
+        padding: 1.375em 15px;
+        display: block;
+        line-height: 1;
+      }
+
+      @at-root .toggle--visible#{&} {
+        animation: fadeIn 0.35s 0.1s backwards;
+        overflow: visible;
+      }
+    }
+  }
+}
+
+@keyframes visible {
+  to {
+    overflow: visible;
+  }
+}

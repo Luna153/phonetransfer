@@ -1,0 +1,108 @@
+include _component.pug
+include _data.pug
+
+doctype html
+html(lang="zh-Hant")
+  block vars
+    - var author = '永豐銀行'
+    - var web_title = '門轉享好康 最高回饋168 - 永豐銀行'
+    - var web_url = 'https://bank.sinopac.com/sinopacBT/webevents/ec/phonetransfer/event/'
+    - var og_url = 'https://bank.sinopac.com/sinopacBT/webevents/ec/phonetransfer/event/'
+    - var og_title = '門轉享好康 最高回饋168 - 永豐銀行'
+    - var og_image = 'https://bank.sinopac.com/sinopacBT/webevents/ec/phonetransfer/event/index_fb.png'
+    - var og_desc = '3步驟完成門號綁定及轉帳(不限金額！)，就有機會獲得168元現金回饋，名額有限，要搶要快喔。'
+    - var schema_classify = '門轉享好康 最高回饋168 - 永豐銀行'
+    - var date_publish = ''
+    - var keywords = ''
+    //- root位置勿更動也勿使用
+    - var root = '../../'
+    - var pageName = ''
+
+  head
+    block head
+      meta(charset='UTF-8')
+      meta(name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover')
+      meta(name='format-detection' content='telephone=no')
+      meta(http-equiv='X-UA-Compatible' content='IE=edge,Chrome=1')
+      //- 不緩存
+      meta(http-equiv='pragma' content='no-cache')
+      meta(http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate')
+      meta(http-equiv='expires' content='0')
+      //- meta info
+      title #{schema_classify ? schema_classify : "" }
+      meta(name='title' content=(schema_classify ? schema_classify : '' ))
+      meta(name='description', content=og_desc ? og_desc : '')
+      meta(name='og:description', content=og_desc ? og_desc : '')
+      meta(property='og:title', content=(og_title ? og_title : ''))
+      meta(property='og:url', content=og_url ? og_url : '')
+      meta(property='og:image', content=og_image ? og_image : '')
+      meta(property='og:type' content='website')
+      meta(property='og:locale' content='zh_TW')
+      meta(name='keywords' content=keywords)
+      meta(name='author', content=author)
+      meta(name='copyright', content=author)
+      //- 標準網址
+      link(rel='canonical' href=web_url)
+      //- favicon
+      link(rel='shortcut icon' href='https://mma.sinopac.com/images/favicon.ico')
+      //- css
+      link(rel='stylesheet' href='css/splide.min.css')
+      link(rel='stylesheet' href='css/aos.css')
+      link(rel='stylesheet' href='css/loading.css')
+      link(rel='preconnect' href='https://fonts.googleapis.com')
+      link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+      link(href='https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap' rel='stylesheet')
+      <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500&display=swap" rel="stylesheet">
+      link(rel='stylesheet' href='./css/all.css?v=2406')
+      script(src="js/jquery-latest.min.securejs" type="text/javascript")
+      script(src="js/splide.min.securejs" type="text/javascript")
+      script(src="js/aos.securejs" type="text/javascript")
+
+
+      //- 數位足跡
+      //- Solene:此處會報錯，先忽略，上永豐環境需使用
+      script(type='text/javascript' src='../../../../bspjs/UrlSetting.js')
+      script(type='text/javascript' src='../../../../bspjs/sensorstracker.js')
+
+
+  body
+    //- img(src="./materials/index_ok1_web 複本.png" alt="" style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width:1920px; opacity: 0.5; z-index: 9999; pointer-events: none;")
+    //- img(src="./materials/index_ok1_mob.png" alt="" style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width:768px; opacity: 0.5; z-index: 9999; pointer-events: none;")
+
+    //- block loading
+    include _loading.pug
+    .wrap
+      block header
+        include layout/_header.pug
+      .content
+        block content
+
+      block footer
+        include layout/_footer.pug
+
+
+    block script
+      //- script(src="js/toggle.securejs" type="text/javascript")
+      script(src="js/gsap.min.securejs" type="text/javascript")
+      script(src="js/ScrollTrigger.min.securejs" type="text/javascript")
+
+      script.
+        document.addEventListener("DOMContentLoaded", function() {
+        let today = new Date();
+        let dateString = today.toISOString().substring(0, 10).replace(/-/g, '');
+        let script = document.createElement('script');
+        script.src = './js/index.securejs?v=' + dateString;
+        document.head.appendChild(script);
+        });
+
+      script.
+        //- loading
+        $(window).on("load", function () {
+          $.Window = $(window);
+          $.Body = $('body');
+
+          $('body').css('visibility', 'visible');
+          $(".loader").delay(500).fadeOut("slow");
+          $("#overlayer").delay(500).fadeOut("slow");
+        })
+
